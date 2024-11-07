@@ -1,0 +1,657 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'ArcadeClassic', sans-serif;
+    color: #fff;
+    background-color: #121212;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'Arcade Classic';
+    src: url('ARCADECLASSIC.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.header-content {
+    font-family: 'Arcade Classic', sans-serif; /* Fallback to sans-serif if font is not found */
+    font-size: 50px; /* Adjust the font size to your preference */
+    color: #ffffff; /* White color for the title text */
+    text-align: center; /* Center the title */
+    text-transform: uppercase; /* Uppercase letters for added retro effect */
+    letter-spacing: 5px; /* Slight spacing for better readability */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Shadow for more contrast */
+    margin-top: 50px; /* Adjust top margin to position the title */
+    animation: jump 1s ease-in-out infinite;
+
+}
+
+.retro-text {
+    font-family: 'Arcade Classic', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin-top: 50px;
+    animation: jump 1s ease-in-out infinite;
+}
+
+h2, p {
+    font-family: 'ArcadeClassic', sans-serif;
+}
+
+a {
+    color: #aca4a4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('security.gif') center/cover no-repeat; /* Set background gif */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Header Content */
+.header-content {
+    z-index: 2; /* Ensures text is on top of the background */
+}
+
+/* Header Title */
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Hero Text */
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+/* Contact Button */
+.contact-btn {
+    background-color: #ff5e5e;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 80px;
+    margin-right: 20px;
+}
+
+.contact-btn:hover {
+    background-color: #ff3333;
+}
+
+/* Arrow Container (for stacking the arrows) */
+.arrow-down-container {
+    position: absolute;
+    bottom: 30px; /* Position arrows at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the arrows */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Wider Animated Pixel Arrow */
+.arrow-down {
+    width: 30px; /* Increased width */
+    height: 30px; /* Increased height */
+    border-left: 6px solid white; /* Wider left border */
+    border-bottom: 6px solid white; /* Wider bottom border */
+    margin: 7px 0; /* Space between arrows */
+    position: relative;
+    transform: rotate(45deg); /* Correct rotation to make the arrow point down */
+    animation: bounceArrow 1s infinite alternate;
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Arrow ripple effect */
+
+
+/* Ripple animation */
+@keyframes rippleEffect {
+    0% {
+        transform: scale(1) rotate(-45deg); /* Initial size */
+    }
+    100% {
+        transform: scale(1.5) rotate(-45deg); /* Expands the arrow */
+    }
+}
+
+/* Animation for the arrow bounce */
+@keyframes bounceArrow {
+    0% {
+        transform: translateY(0) rotate(-45deg); /* Arrow starts at its normal position */
+    }
+    100% {
+        transform: translateY(10px) rotate(-45deg); /* Arrow moves down to create bounce effect */
+    }
+}
+
+
+
+
+
+
+/* Contact Button */
+.contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ff5e5e;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #ff4040;
+    transform: scale(1.1);
+}
+
+/* Contact Buttons Container */
+.contact-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'ArcadeClassic', sans-serif;
+}
+
+.contact-buttons .contact-btn {
+    padding: 15px 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-buttons .contact-btn:hover {
+    background-color: #ff4040;
+    transform: scale(1.1);
+}
+
+a.contact-btn {
+    color: #fff;
+    font-family: "Arcade Classic", sans-serif;
+}
+/* Parallax Effect Section */
+.parallax {
+    position: relative;
+    height: 100vh;
+    background: url('paral2.gif') no-repeat fixed center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    will-change: background-position;
+}
+
+/* Parallax Effect for About Text */
+
+/* Style the About Me box */
+.about-me-box {
+    background: linear-gradient(145deg, #d32f2f, #c2185b); /* Red gradient */
+    color: #ffffff;
+    border-radius: 15px; /* Softer rounded corners */
+    padding: 25px;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    box-sizing: border-box; /* Ensures padding does not affect width */
+}
+
+/* Style the header inside the box */
+.about-header {
+    font-family: 'Arcade classic', sans-serif; /* Arcade font */
+    font-size: 32px; /* Header font size */
+    text-transform: uppercase; /* Uppercase letters for the header */
+    letter-spacing: 3px; /* Slight spacing between letters */
+    margin-bottom: 15px; /* Space between the header and text */
+}
+
+/* Style the text under the header */
+.about-text {
+    font-family: 'Arial', sans-serif; /* Simple sans-serif font for the text */
+    font-size: 18px; /* Text font size */
+    line-height: 1.6; /* Adjust line spacing for readability */
+}
+
+@media (max-width: 768px) {
+    .about-me-box {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .about-header {
+        font-size: 28px;
+    }
+
+    .about-text {
+        font-size: 16px;
+    }
+}
+
+/* Make the About Me box even more responsive for mobile */
+@media (max-width: 480px) {
+    .about-me-box {
+        width: 95%;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .about-header {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+}
+
+/* Style the text under the header */
+.about-text {
+    font-family: 'Arial', sans-serif; /* Simple sans-serif font for the text */
+    font-size: 18px; /* Text font size */
+    line-height: 1.6; /* Adjust line spacing for readability */
+}
+
+
+.section-content {
+    padding: 20px;
+    z-index: 10;
+    max-width: 800px;
+}
+
+
+h2 {
+    font-family: 'Arcade Classic', sans-serif; /* Fallback to sans-serif if font is not found */
+    font-size: 50px; /* Adjust the font size to your preference */
+    color: #ffffff; /* White color for the title text */
+    text-align: center; /* Center the title */
+    text-transform: uppercase; /* Uppercase letters for added retro effect */
+    letter-spacing: 5px; /* Slight spacing for better readability */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Shadow for more contrast */
+    margin-top: 50px; /* Adjust top margin to position the title */
+    animation: jump 1s ease-in-out infinite;
+}
+
+p {
+    font-size: 1.2rem;
+    
+}
+
+
+
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #1e1e1e;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#portfolio h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ff5e5e;
+    font-family: "Arcade Classic", sans-serif;
+}
+
+/* Grid for Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 2rem;
+    justify-items: center; /* Ensures items are centered */
+}
+
+.portfolio-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+}
+
+/* Flip Card Container */
+.flip-card {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center; /* Centers the flip card within the item */
+    align-items: center;
+}
+
+/* Flip Card Inner */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Flip Card Front */
+.flip-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide front side when flipped */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    padding: 20px;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Card Content (Text under the image) */
+.card-content {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    font-family: "Arcade Classic", sans-serif;
+}
+
+/* Flip Card Back */
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Keep back face hidden initially */
+    background-color: #444;
+    color: #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: rotateY(180deg); /* Only rotate the back */
+}
+
+/* Hover Effect: Flip the card */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Flip the entire card */
+}
+
+/* Change background color of the front on hover */
+.flip-card:hover .flip-card-front {
+    background-color: #555;
+}
+
+/* Show content on the back when hovered */
+.flip-card:hover .flip-card-back {
+    opacity: 1;
+}
+
+/* Adjust image styling inside flip-card front */
+.flip-card-front img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* Remove the title on the back */
+.flip-card-back p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+
+/* Remove the title on the back */
+.flip-card-back p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Grid Responsiveness */
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+#timeline {
+    background-color: #1e1e1e;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+}
+
+#timeline h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ff5e5e;
+    font-family: "Arcade Classic", sans-serif;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Timeline Container */
+#timeline {
+    background-color: #1e1e1e;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Timeline Title */
+#timeline h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ff5e5e;
+    font-family: "Arcade Classic", sans-serif;
+}
+
+/* Timeline Wrapper */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 0;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;    /* Center items vertically */
+    text-align: center;     /* Center text horizontally */
+    flex-direction: column; /* Stack title and content vertically */
+}
+
+/* Timeline Item Title */
+.timeline-item h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+    opacity: 1;
+    font-family: "Arcade Classic", sans-serif;
+}
+.timeline-item h4 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+    opacity: 1;
+    font-family: "block", sans-serif;
+    text-align: center;
+}
+
+/* Timeline Date */
+.timeline-item .timeline-date {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5e5e;
+    background-color: #1e1e1e;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-family: "Arcade Classic", sans-serif;
+}
+
+/* Timeline Content */
+.timeline-item .timeline-content p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ccc;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-bottom: 10px;
+    
+}
+
+/* Timeline Item Active State */
+.timeline-item.active {
+    background-color: #333;
+}
+
+/* Make content visible and animated on scroll */
+.timeline-item.active .timeline-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Active State - Date */
+.timeline-item.active .timeline-date {
+    animation: pulse 0.8s ease-out infinite;
+}
+
+/* Extra Content Animation */
+.timeline-item .extra-content {
+    display: none;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1rem;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item.active .extra-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Pulse Animation for the Date */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Scroll Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
