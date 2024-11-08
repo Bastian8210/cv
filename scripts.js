@@ -81,4 +81,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 observer.observe(item);
             });
         });
-        
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const webhookUrl = "https://discord.com/api/webhooks/1304395440707604552/BTnO-YooQFw_fpkOiGHcH8zJZl3LMWyMLnFNjAEy__BRnhNzHOD7SjhqCoEkoVey3Kks";
+
+    const data = {
+        content: "New visitor has landed on the page!",
+        username: "Page Notifier",
+        avatar_url: "https://cdni.iconscout.com/illustration/premium/thumb/honey-pot-illustration-download-in-svg-png-gif-file-formats--jar-bottle-thanksgiving-pack-illustrations-5624153.png"
+    };
+
+    fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (!response.ok) {
+            console.error("Failed to send message to Discord webhook:", response.statusText);
+        } else {
+            console.log("Message sent to Discord webhook successfully.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+});
