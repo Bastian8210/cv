@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
 
-document.addEventListener("DOMContentLoaded", () => {
     const webhookUrl = "https://discord.com/api/webhooks/1304395440707604552/BTnO-YooQFw_fpkOiGHcH8zJZl3LMWyMLnFNjAEy__BRnhNzHOD7SjhqCoEkoVey3Kks";
 
     const data = {
@@ -109,4 +108,4 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => {
         console.error("Error:", error);
     });
-});
+
