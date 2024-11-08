@@ -12,9 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const timelineItems = document.querySelectorAll('.timeline-item');
 
     // Add click event listener to each timeline item
+    // *b*-trigger
     timelineItems.forEach(item => {
         item.addEventListener('click', function() {
             // Toggle the 'active' class to show/hide extra content and trigger animations
+            // *as* to active
             this.classList.toggle('active');
         });
     });
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let titleIndex = 0;
         let currentTitle = "";
         let charIndex = 0;
+        //*ti*-l at delete teksten
         let isDeleting = false;
 
         function typeWriterEffect() {
@@ -48,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 currentTitle = titles[titleIndex].substring(0, charIndex++);
                 document.title = currentTitle;
+                //*an* identity
                 if (charIndex > titles[titleIndex].length) {
                     isDeleting = true;
                     setTimeout(typeWriterEffect, 1000); // Pause after typing the title
