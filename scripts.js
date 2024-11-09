@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
 
-    const webhookUrl = "https://discord.com/api/webhooks/1304395440707604552/BTnO-YooQFw_fpkOiGHcH8zJZl3LMWyMLnFNjAEy__BRnhNzHOD7SjhqCoEkoVey3Kks";
+    const webhookUrl = "https://discord.com/api/webhooks/1304794017065730108/dRJ0gCdUuvV6rTMSRW5_7uoW0tAWvQH-hsppkzF5rH63s81_3lXTvSoK8fPGmI1ZLDg-";
 
     const data = {
         content: "New visitor has landed on the page!",
